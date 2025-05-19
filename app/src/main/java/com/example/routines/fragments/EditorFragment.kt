@@ -3,6 +3,7 @@ package com.example.routines.fragments
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -36,8 +37,7 @@ class EditorFragment : Fragment() {
     }
 
     private fun switchView() {
-        binding.switch1.setOnCheckedChangeListener{
-                _, isChecked ->
+        binding.switch1.setOnCheckedChangeListener { _, isChecked ->
             // isChecked - новое состояние переключателя
             if (isChecked) {
                 // Действия при включении
@@ -52,18 +52,18 @@ class EditorFragment : Fragment() {
         }
     }
 
-    private fun onClickReminder(){
-        binding.createReminder.setOnClickListener{
-            startActivity(Intent(requireActivity(), ReminderActivity::class.java).apply{
-
+    private fun onClickReminder() {
+        binding.createReminder.setOnClickListener {
+            Log.d("BTN_Reminder", "Кнопка Назад")
+            startActivity(Intent(requireActivity(), ReminderActivity::class.java).apply {
             })
         }
     }
-
-    private fun onClickScenario(){
-        binding.createScenario.setOnClickListener{
-            startActivity(Intent(requireActivity(), ScenarioActivity::class.java).apply{
-
+//Хуита кстати
+    private fun onClickScenario() {
+        binding.createScenario.setOnClickListener {
+            Log.d("BTN_Scenario", "Кнопка Назад")
+            startActivity(Intent(requireActivity(), ScenarioActivity::class.java).apply {
             })
         }
     }

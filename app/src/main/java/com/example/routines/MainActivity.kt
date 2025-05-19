@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+// Я НЕНАВИЖУ ФРАГМЕНТЫ!
         binding.mainButton.setOnClickListener{
             supportFragmentManager.beginTransaction().replace(R.id.place_holder, MainFragment.newInstance()).commit()
             binding.mainimageView.setImageResource(R.drawable.homeoutlinedact)

@@ -28,7 +28,7 @@ class ReminderActivity : AppCompatActivity() {
     private fun onClickBack(){
         binding.buttonBack.setOnClickListener {
             finish()
-            Log.d("Sasi","EBLAN")
+            Log.d("BTN_BACK","Кнопка Назад")
         }
     }
 
