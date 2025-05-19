@@ -27,7 +27,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
         android:fontFamily="@font/montserrat_bold"
-        android:text="Редактирование сценариев"
+        android:text="@string/tv_appbar_activity_scenario"
         android:textColor="#FFB117"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

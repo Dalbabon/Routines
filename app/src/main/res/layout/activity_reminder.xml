@@ -27,7 +27,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
         android:fontFamily="@font/montserrat_bold"
-        android:text="Редактирование напоминаний"
+        android:text="@string/tv_appbar_activity_reminder"
         android:textColor="#FFB117"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,25 +52,31 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:backgroundTint="@null">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_medium"
-                    android:hint="Введите название"
+                    android:hint="@string/ed_activity_reminder_header"
                     android:textColor="#FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:backgroundTint="@null">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:backgroundTint="@null"
                     android:fontFamily="@font/montserrat_medium"
-                    android:hint="Введите текст"
+                    android:hint="@string/ed_activity_reminder_main"
                     android:textColor="#FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,7 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Сохранить"
+            android:text="@string/btn_activity_reminder_save"
             android:textColor="#FFB117"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
