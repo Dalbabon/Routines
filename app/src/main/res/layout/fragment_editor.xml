@@ -97,7 +97,7 @@
             app:layout_constraintVertical_bias="1.0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
+                android:id="@+id/createReminder"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:background="@drawable/buttom_bg"
@@ -134,7 +134,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout4"
+                android:id="@+id/createScenario"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:background="@drawable/buttom_bg"

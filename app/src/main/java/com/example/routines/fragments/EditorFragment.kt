@@ -1,5 +1,6 @@
 package com.example.routines.fragments
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.routines.R
+import com.example.routines.ReminderActivity
+import com.example.routines.ScenarioActivity
 import com.example.routines.databinding.FragmentEditorBinding
 
 
@@ -28,7 +31,8 @@ class EditorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         switchView()
-
+        onClickReminder()
+        onClickScenario()
     }
 
     private fun switchView() {
@@ -45,6 +49,22 @@ class EditorFragment : Fragment() {
                 binding.textView6.setTextColor(Color.argb(255, 255, 177, 23))
                 binding.textView7.setTextColor(Color.argb(255, 69, 77, 91))
             }
+        }
+    }
+
+    private fun onClickReminder(){
+        binding.createReminder.setOnClickListener{
+            startActivity(Intent(requireActivity(), ReminderActivity::class.java).apply{
+
+            })
+        }
+    }
+
+    private fun onClickScenario(){
+        binding.createScenario.setOnClickListener{
+            startActivity(Intent(requireActivity(), ScenarioActivity::class.java).apply{
+
+            })
         }
     }
 
