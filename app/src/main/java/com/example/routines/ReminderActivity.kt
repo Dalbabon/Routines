@@ -19,19 +19,6 @@ class ReminderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-//        val minuteEditText: EditText = findViewById(R.id.editTextMinute)
-//        minuteEditText.doAfterTextChanged {
-//            val minutes = it.toString().toIntOrNull()
-//
-//            if (minutes == null || minutes !in 0..59) {
-//                minuteEditText.error = "Минуты от 0 до 59"
-//            } else {
-//                // Всё ок — можно использовать значение
-//                Log.d("TIME_INPUT", "Минуты: $minutes")
-//            }
-//        }
-
         binding = ActivityReminderBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
@@ -41,6 +28,8 @@ class ReminderActivity : AppCompatActivity() {
             insets
         }
         onClickBack()
+
+
     }
 
 
