@@ -60,3 +60,13 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.lifecycleViewmodelKtx)
 }
+kapt {
+    javacOptions {
+        option("--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED")
+        option("--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED")
+        option("--add-exports=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED")
+        option("--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED")
+        option("--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED")
+        option("--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED")
+    }
+}
