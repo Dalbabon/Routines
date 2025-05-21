@@ -7,4 +7,7 @@
     <string name="ed_activity_reminder_header">Введите текст</string>
     <string name="btn_activity_reminder_save">Сохранить</string>
     <string name="tv_appbar_activity_scenario">Редактирование сценариев</string>
+
+    <string name="btn_scenario_change_condition">Если</string> <!--сука блять-->
+    <string name="btn_scenario_change_aftermath">Тогда</string>
 </resources>
