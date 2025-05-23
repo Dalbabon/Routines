@@ -3,12 +3,23 @@
     <style name="Base.Theme.Routines" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowBackground">#D6D2E9</item>
+        <item name="android:textColor">@color/text_prime</item>
     </style>
 
     <style name="Theme.Routines" parent="Base.Theme.Routines" />
 
     <style name="SwitchStyle" parent="Theme.MaterialComponents.DayNight">
-        <item name="colorControlActivated">#FFB117</item>
-        <item name="android:colorForeground">#FFB117</item>
+        <item name="colorControlActivated">#C0B7E8</item>
+        <item name="android:colorForeground">#C0B7E8</item>
+    </style>
+
+    <style name="MyTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_hint</item>
+        <item name="hintTextColor">@color/text_hint</item>
+        <item name="boxCornerRadiusTopEnd">40dp</item>
+        <item name="boxCornerRadiusTopStart">40dp</item>
+        <item name="boxCornerRadiusBottomStart">40dp</item>
+        <item name="boxCornerRadiusBottomEnd">40dp</item>
     </style>
 </resources>

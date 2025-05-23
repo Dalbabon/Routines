@@ -26,27 +26,27 @@ class MainActivity : AppCompatActivity() {
         binding.mainButton.setOnClickListener{
             supportFragmentManager.beginTransaction().replace(R.id.place_holder, MainFragment.newInstance()).commit()
             binding.mainimageView.setImageResource(R.drawable.homeoutlinedact)
-            binding.editorimageView.setImageResource(R.drawable.plussquareoutlined)
+            binding.editorimageView.setImageResource(R.drawable.plusoutlined)
             binding.settingimageView.setImageResource(R.drawable.settingoutlined)
         }
 
         binding.editorButton.setOnClickListener{
             supportFragmentManager.beginTransaction().replace(R.id.place_holder, EditorFragment.newInstance()).commit()
             binding.mainimageView.setImageResource(R.drawable.homeoutlined)
-            binding.editorimageView.setImageResource(R.drawable.plussquareoutlinedact)
+            binding.editorimageView.setImageResource(R.drawable.plusoutlinedact)
             binding.settingimageView.setImageResource(R.drawable.settingoutlined)
         }
 
         binding.settingButton.setOnClickListener{
             supportFragmentManager.beginTransaction().replace(R.id.place_holder, SettingFragment.newInstance()).commit()
             binding.mainimageView.setImageResource(R.drawable.homeoutlined)
-            binding.editorimageView.setImageResource(R.drawable.plussquareoutlined)
+            binding.editorimageView.setImageResource(R.drawable.plusoutlined)
             binding.settingimageView.setImageResource(R.drawable.settingoutlinedact)
         }
 
         supportFragmentManager.beginTransaction().replace(R.id.place_holder, MainFragment.newInstance()).commit()
         binding.mainimageView.setImageResource(R.drawable.homeoutlinedact)
-        binding.editorimageView.setImageResource(R.drawable.plussquareoutlined)
+        binding.editorimageView.setImageResource(R.drawable.plusoutlined)
         binding.settingimageView.setImageResource(R.drawable.settingoutlined)
     }
 }

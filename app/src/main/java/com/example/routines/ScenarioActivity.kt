@@ -20,13 +20,13 @@ class ScenarioActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        onClickBack()
+        //onClickBack()
     }
 
-    private fun onClickBack(){
-        binding.buttonBackSC.setOnClickListener {
-            finish()
-            Log.d("Sasi","EBLAN")
-        }
-    }
+//    private fun onClickBack(){
+//        binding.buttonBackSC.setOnClickListener {
+//            finish()
+//            Log.d("Sasi","EBLAN")
+//        }
+//    }
 }

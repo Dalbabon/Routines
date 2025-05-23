@@ -32,41 +32,14 @@ class ReminderActivity : AppCompatActivity() {
 
     }
 
-    //Тут все EditText
-    val hourEditText = findViewById<EditText>(R.id.editHour);
-    //    val — неизменяемая (как final в Java).
-    //    var — изменяемая (обычная переменная).
-
-    //Циферки для обработчика
-    var hour: Int = 0;
-    var minute: Int = 0;
-    var day: Int = 0;
-    var month: Int = 0;
-    var year: Int = 0;
-
-    private fun checker(){
-
-    }
-
-
-    private fun test() {
-        var text = hourEditText.text.toString()
-        var number = hourEditText.text.toString().toInt()  // Берёт текст и конвертирует в Int
-    }
-
 
     private fun onClickBack() {
-        binding.buttonBack.setOnClickListener {
+        binding.buttonback.setOnClickListener {
             finish()
             Log.d("BTN_BACK", "Кнопка Назад")
         }
     }
 
-    private fun onClickSave() {
-        binding.btnSave.setOnClickListener() {
-
-        }
-    }
 
 
 }

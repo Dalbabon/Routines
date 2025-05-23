@@ -41,13 +41,13 @@ class EditorFragment : Fragment() {
             // isChecked - новое состояние переключателя
             if (isChecked) {
                 // Действия при включении
-                binding.textView7.setTextColor(Color.argb(255, 255, 177, 23))
-                binding.textView6.setTextColor(Color.argb(255, 69, 77, 91))
+                binding.textView6.setTextColor(Color.argb(255, 192, 183, 232))
+                binding.textView7.setTextColor(Color.argb(255, 255, 255, 255))
             } else {
                 // Действия при выключении
 
-                binding.textView6.setTextColor(Color.argb(255, 255, 177, 23))
-                binding.textView7.setTextColor(Color.argb(255, 69, 77, 91))
+                binding.textView7.setTextColor(Color.argb(255, 192, 183, 232))
+                binding.textView6.setTextColor(Color.argb(255, 255, 255, 255))
             }
         }
     }
