@@ -89,8 +89,102 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutMin"
             style="@style/MyTextInputLayoutStyle"
-            android:layout_width="match_parent"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColorHint="@color/text_hint"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/textinput_outline_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6"
+            app:placeholderTextColor="@color/text_prime">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextMin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:hint="Минуты"
+                android:textColor="@color/text_prime" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutHour"
+            style="@style/MyTextInputLayoutStyle"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColorHint="@color/text_hint"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/textinput_outline_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6"
+            app:placeholderTextColor="@color/text_prime">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextHour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:hint="Часы"
+                android:textColor="@color/text_prime" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutYear"
+            style="@style/MyTextInputLayoutStyle"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColorHint="@color/text_hint"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/textinput_outline_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43"
+            app:placeholderTextColor="@color/text_prime">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextYear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:hint="Год"
+                android:textColor="@color/text_prime" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutMon"
+            style="@style/MyTextInputLayoutStyle"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
@@ -107,15 +201,49 @@
             app:placeholderTextColor="@color/text_prime">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextMon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/montserrat_bold"
-                android:hint="Дата и время"
+                android:gravity="center"
+                android:hint="Месяц"
                 android:textColor="@color/text_prime" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutDay"
+            style="@style/MyTextInputLayoutStyle"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColorHint="@color/text_hint"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/textinput_outline_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43"
+            app:placeholderTextColor="@color/text_prime">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextDay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:hint="День"
+                android:textColor="@color/text_prime" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutDescr"
             style="@style/MyTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -134,6 +262,7 @@
             app:placeholderTextColor="@color/text_prime">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextDescr"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/montserrat_bold"
@@ -143,6 +272,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextInputLayoutTitle"
             style="@style/MyTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -161,6 +291,7 @@
             app:placeholderTextColor="@color/text_prime">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextTitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/montserrat_bold"
@@ -172,6 +303,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/saveButton"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
