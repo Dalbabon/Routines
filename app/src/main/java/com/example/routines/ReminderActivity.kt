@@ -34,20 +34,65 @@ class ReminderActivity : AppCompatActivity() {
         }
 
 
+        if (intent?.hasExtra("item") == true) {
+            val itemReminder = intent.getSerializableExtra("item") as? ItemReminder
+            var isAct = itemReminder?.activRem
+            itemReminder?.let { reminder ->
+                binding.apply {
+                    // Устанавливаем заголовок и описание
+                    TextInputEditTextTitle.setText(reminder.tagRem)
+                    TextInputEditTextDescr.setText(reminder.descriptionRem)
 
-        //val item = intent.getSerializableExtra("item") as ItemReminder
-        //var isDataHadledRemind = true
-//        binding.apply {
-//            TextInputEditTextTitle.setText(item.tagRem)
-//            TextInputEditTextDescr.setText(item.descriptionRem)
-//            TextInputEditTextDay.setText(item.dateRem.substring(0, 2))
-//            TextInputEditTextMon.setText(item.dateRem.substring(3, 5))
-//            TextInputEditTextYear.setText(item.dateRem.substring(6, 11))
-//            TextInputEditTextHour.setText(item.timeRem.substring(0, 2))
-//            TextInputEditTextMin.setText(item.timeRem.substring(3, 5))
-//        }
+                    // Безопасно обрабатываем дату (формат ddMMyyyy или аналогичный)
+                    if (reminder.dateRem.length >= 8) {
+                        TextInputEditTextDay.setText(reminder.dateRem.substring(0, 2))
+                        TextInputEditTextMon.setText(reminder.dateRem.substring(2, 4))
+                        TextInputEditTextYear.setText(reminder.dateRem.substring(4, 8))
+                    }
+
+                    // Безопасно обрабатываем время (формат HHmm или аналогичный)
+                    if (reminder.timeRem.length >= 4) {
+                        TextInputEditTextHour.setText(reminder.timeRem.substring(0, 2))
+                        TextInputEditTextMin.setText(reminder.timeRem.substring(2, 4))
+                    }
+
+                    saveButton.setOnClickListener{
+                        var isDataHandledReminder = true
+                        val db = MainDb.getDb(this@ReminderActivity)
+                        val id = reminder.id
+                        val title = binding.TextInputEditTextTitle.text.toString()
+                        val description = binding.TextInputEditTextDescr.text.toString()
+                        val date = binding.TextInputEditTextDay.text.toString() + binding.TextInputEditTextMon.text.toString() + binding.TextInputEditTextYear.text.toString()
+                        val time = binding.TextInputEditTextHour.text.toString() + binding.TextInputEditTextMin.text.toString()
+                        val rem = Item(id, title, description, date, time, 0)
+                        val remAct = Item(id, title, description, date, time, 1)
+                        if (isAct == 0){
+                            db.getDao().getAllReminderItems().asLiveData().observe(this@ReminderActivity){
+                                if(isDataHandledReminder){Thread{
+                                    db.getDao().insertItem(rem)
+                                }.start()}
+                                isDataHandledReminder = false
+                            }
+                        }
+                        else{
+                            db.getDao().getAllReminderItems().asLiveData().observe(this@ReminderActivity){
+                                if(isDataHandledReminder){Thread{
+                                    db.getDao().insertItem(remAct)
+                                }.start()}
+                                isDataHandledReminder = false
+                            }
+                        }
+                        finish()
+                    }
+
+                }
+            }
+
+        }
+        else {
+            onClickSave()
+        }
         onClickBack()
-        onClickSave()
     }
 
     private fun onClickSave(){
@@ -58,11 +103,7 @@ class ReminderActivity : AppCompatActivity() {
             val date = binding.TextInputEditTextDay.text.toString() + binding.TextInputEditTextMon.text.toString() + binding.TextInputEditTextYear.text.toString()
             val time = binding.TextInputEditTextHour.text.toString() + binding.TextInputEditTextMin.text.toString()
             val rem = Item(null, title, description, date, time, 0)
-            //db.getDao().getAllItems().asLiveData().observe(this){
-                //if (it.isNullOrEmpty()) {
-                    Thread{db.getDao().insertItem(rem)}.start()
-                //}
-            //}
+            Thread{db.getDao().insertItem(rem)}.start()
             finish()
         }
     }
