@@ -104,8 +104,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutMon"
+            app:layout_constraintVertical_bias="0.100000024"
             app:placeholderTextColor="@color/text_prime">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -135,8 +135,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutMon"
+            app:layout_constraintVertical_bias="0.100000024"
             app:placeholderTextColor="@color/text_prime">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -166,8 +166,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.43"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutDescr"
+            app:layout_constraintVertical_bias="0.060000002"
             app:placeholderTextColor="@color/text_prime">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -196,8 +196,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.43"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutDescr"
+            app:layout_constraintVertical_bias="0.060000002"
             app:placeholderTextColor="@color/text_prime">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -227,8 +227,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.43"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutDescr"
+            app:layout_constraintVertical_bias="0.060000002"
             app:placeholderTextColor="@color/text_prime">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -257,8 +257,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayoutTitle"
+            app:layout_constraintVertical_bias="0.050000012"
             app:placeholderTextColor="@color/text_prime">
 
             <com.google.android.material.textfield.TextInputEditText
