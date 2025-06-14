@@ -22,3 +22,19 @@ data class Item (
 
 
     )
+
+@Entity(tableName = "scenario")
+data class ItemScenario (
+    @PrimaryKey(autoGenerate = true)
+    var id: Int? = null,
+    @ColumnInfo(name = "tagScen")
+    var tagScen: String,
+    @ColumnInfo(name = "ifScen")
+    var ifScen: String,
+    @ColumnInfo(name = "elseScen")
+    var elseScen: String,
+    @ColumnInfo(name = "activScen")
+    var activScen: Int,
+
+
+    )

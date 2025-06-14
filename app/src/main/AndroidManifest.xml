@@ -17,13 +17,19 @@
         android:theme="@style/Theme.Routines"
         tools:targetApi="31">
         <activity
+            android:name=".ScenarioELse"
+            android:exported="false" />
+        <activity
+            android:name=".ScenarioIf"
+            android:exported="false" />
+        <activity
             android:name=".ScenarioActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ReminderActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:exported="false"/>
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

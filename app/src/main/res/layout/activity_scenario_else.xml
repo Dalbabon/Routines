@@ -5,10 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".ReminderActivity">
+    tools:context=".ScenarioELse">
 
-    <!-- Верхняя панель -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout6"
         android:layout_width="0dp"
@@ -39,6 +37,7 @@
                 app:srcCompat="@drawable/button_back" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -68,7 +67,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Прокручиваемый контент -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -87,42 +85,6 @@
             android:paddingEnd="6dp">
 
             <!-- Первый блок -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12.5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/block_bg"
-                    android:orientation="horizontal"
-                    tools:ignore="MissingConstraints">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="25dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/button_back"
-                        tools:srcCompat="@android:drawable/ic_menu_mylocation" />
-
-
-                    <TextView
-                        android:id="@+id/TV_regime"
-                        style="@style/TextView_Base"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Режимы"
-                        android:textSize="25sp" />
-
-
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -133,220 +95,39 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/block_bg"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     tools:ignore="MissingConstraints">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="25dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/button_back"
-                        tools:srcCompat="@android:drawable/ic_menu_mylocation" />
-
-
                     <TextView
-                        android:id="@+id/TV_Connection"
+                        android:id="@+id/TV_change_else_cond"
                         style="@style/TextView_Base"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Подключение"
-                        android:textSize="25sp" />
+                        android:gravity="end"
+                        android:text="Тогда    "
+                        android:textSize="16sp" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical"></LinearLayout>
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/TextView_Base"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12.5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/block_bg"
-                    android:orientation="horizontal"
-                    tools:ignore="MissingConstraints">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="25dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/button_back"
-                        tools:srcCompat="@android:drawable/ic_menu_mylocation" />
-
-
-                    <TextView
-                        android:id="@+id/TV_connected_devices"
-                        style="@style/TextView_Base"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Подключенные устройства"
-                        android:textSize="25sp" />
-
-
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12.5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/block_bg"
-                    android:orientation="horizontal"
-                    tools:ignore="MissingConstraints">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="25dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/button_back"
-                        tools:srcCompat="@android:drawable/ic_menu_mylocation" />
-
-
-                    <TextView
-                        android:id="@+id/TV_notification"
-                        style="@style/TextView_Base"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Уведомления"
-                        android:textSize="25sp" />
-
-
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12.5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/block_bg"
-                    android:orientation="horizontal"
-                    tools:ignore="MissingConstraints">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="25dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/button_back"
-                        tools:srcCompat="@android:drawable/ic_menu_mylocation" />
-
-
-                    <TextView
-                        android:id="@+id/TV_vibration"
-                        style="@style/TextView_Base"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Звуки и вибрация"
-                        android:textSize="25sp" />
-
-
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12.5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/block_bg"
-                    android:orientation="horizontal"
-                    tools:ignore="MissingConstraints">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="25dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/button_back"
-                        tools:srcCompat="@android:drawable/ic_menu_mylocation" />
-
-
-                    <TextView
-                        android:id="@+id/TV_display"
-                        style="@style/TextView_Base"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Дисплей"
-                        android:textSize="25sp" />
-
-
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12.5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/block_bg"
-                    android:orientation="horizontal"
-                    tools:ignore="MissingConstraints">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="25dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/button_back"
-                        tools:srcCompat="@android:drawable/ic_menu_mylocation" />
-
-
-                    <TextView
-                        android:id="@+id/TV_lockScreen"
-                        style="@style/TextView_Base"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Экран блокировки"
-                        android:textSize="25sp" />
-
-
-                </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/block_bg"
+                android:padding="12dp"
+                android:text="Сохранить" />
 
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

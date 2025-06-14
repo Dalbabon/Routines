@@ -1,19 +1,18 @@
 package com.example.routines
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.routines.databinding.ActivityScenarioBinding
+import com.example.routines.databinding.ActivityScenarioElseBinding
 
-class ScenarioActivity : AppCompatActivity() {
-    lateinit var binding: ActivityScenarioBinding
+class ScenarioELse : AppCompatActivity() {
+    lateinit var binding: ActivityScenarioElseBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityScenarioBinding.inflate(layoutInflater)
+        binding = ActivityScenarioElseBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -22,20 +21,6 @@ class ScenarioActivity : AppCompatActivity() {
             insets
         }
         onClickBack()
-        onClickReminder()
-        onClickScenario()
-    }
-
-    private fun onClickReminder() {
-        binding.btnIfAdd.setOnClickListener {
-            startActivity(Intent(this, ScenarioIf::class.java))
-        }
-    }
-
-    private fun onClickScenario() {
-        binding.btnElseAdd.setOnClickListener {
-            startActivity(Intent(this, ScenarioELse::class.java))
-        }
     }
 
     private fun onClickBack(){
